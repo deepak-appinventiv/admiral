@@ -23,7 +23,6 @@ Xcode 10.1 or higher is required. It can be installed from the App Store. See [I
 (https://facebook.github.io/react-native/docs/android-setup.html) for instructions on how to set up your Ios environment.
 ```
 
-$ npx react-native run-ios
 
 ### Android Setup
 ```
@@ -34,8 +33,9 @@ You will need to install the Android SDK (and an Android emulator if you want to
 ```shell
 $ git clone
 $ yarn install
-$ For ios got to ios folder and run pod install 
-$ react-native run-android or react-native run-ios
+$ cd ios
+$ pod install 
+$ npx react-native run-android or npx react-native run-ios
 
 or
 

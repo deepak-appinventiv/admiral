@@ -10,4 +10,5 @@ export default {
     notification: require('../../assets/images/icSelectNotification.png'),
     setting: require('../../assets/images/icSelectSettings.png'),
     questioner: require('../../assets/images/icSelectQuestionnair.png'),
+    profileImage: require('../../assets/images/ProfileImage.png'),
 }

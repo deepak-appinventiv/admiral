@@ -10,17 +10,17 @@ export default memo(() => (
 ));
 
 export const styles = StyleSheet.create({
-    container: {
-      height: Dimensions.get('window').height,
-      width: Dimensions.get('window').width,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: Utils.Constant.color.transparent,
-      position: 'absolute',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-    },
-  });
-  
+  container: {
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Utils.Constant.color.transparent,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+});
+

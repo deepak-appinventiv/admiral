@@ -5,7 +5,7 @@ import { MovieModal } from "../modal";
 import ProgressiveImage from "./progressiveImage";
 import Rating from "./rating";
 interface Props extends MovieModal{
-    
+    itemIndex: number;
 }
 
 export default memo(function Category(props: Props) {
@@ -14,7 +14,7 @@ export default memo(function Category(props: Props) {
             <ProgressiveImage src={`${Utils.Constant.posterBaseUrl}${props.poster_path}`} />
             <Text numberOfLines={1} style={styles.subTitle}>{props.original_title}</Text>
             <Rating 
-                rating={2}
+                rating={props.itemIndex%2===0 ? 2 : 3.5}
             />
             <Text numberOfLines={2} style={styles.title}>{props.title}</Text>
         </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginHorizontal: 10,
         width: Utils.Dimension.vw(180),
-        height: Utils.Dimension.vw(270),
+        height: Utils.Dimension.vw(285),
        
     },
     title:{

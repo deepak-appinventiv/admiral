@@ -32,64 +32,68 @@ class HomeScreen extends React.PureComponent<HomeProps, State> {
 
   render() {
     return (
-      <ScrollView
-        style={styles.container}
-        bounces={false}
-        showsVerticalScrollIndicator={false}
-      >
+      <>
         <Header />
         {
           !this.state.isLoading ?
-            <>
-              <View>
-                <Text style={styles.heading}>Cinema around your area</Text>
-                <FlatList
-                  data={Utils.Constant.cattegory}
-                  horizontal={true}
-                  keyExtractor={(item: any, index: any) => index.toString()}
-                  showsHorizontalScrollIndicator={false}
-                  renderItem={({ item, index }) => (
-                    <CategoryCard
-                      {...item}
-                    />
-                  )}
-                />
-              </View>
-              <View>
-                <Text style={styles.heading}>New Relesae</Text>
-                <FlatList
-                  data={this.props.movies}
-                  horizontal={true}
-                  keyExtractor={(item: any, index: any) => index.toString()}
-                  showsHorizontalScrollIndicator={false}
-                  renderItem={({ item, index }) => (
-                    <MovieCard
-                      {...item}
-                    />
-                  )}
-                />
-              </View>
-              <View>
-                <Text style={styles.heading}>You might want to see this</Text>
-                <FlatList
-                  data={this.props.movies}
-                  horizontal={true}
-                  keyExtractor={(item: any, index: any) => index.toString()}
-                  showsHorizontalScrollIndicator={false}
-                  renderItem={({ item, index }) => (
-                    <MovieCard
-                      {...item}
-                    />
-                  )}
-                />
-              </View>
-            </>
+            <ScrollView
+              style={styles.container}
+              bounces={false}
+              showsVerticalScrollIndicator={false}
+            >
+
+              <>
+                <View>
+                  <Text style={styles.heading}>Cinema around your area</Text>
+                  <FlatList
+                    data={Utils.Constant.cattegory}
+                    horizontal={true}
+                    keyExtractor={(item: any, index: any) => index.toString()}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item, index }) => (
+                      <CategoryCard
+                        {...item}
+                      />
+                    )}
+                  />
+                </View>
+                <View>
+                  <Text style={styles.heading}>New Relesae</Text>
+                  <FlatList
+                    data={this.props.movies}
+                    horizontal={true}
+                    keyExtractor={(item: any, index: any) => index.toString()}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item, index }) => (
+                      <MovieCard
+                        {...item}
+                        itemIndex={index}
+                      />
+                    )}
+                  />
+                </View>
+                <View>
+                  <Text style={styles.heading}>You might want to see this</Text>
+                  <FlatList
+                    data={this.props.movies}
+                    horizontal={true}
+                    keyExtractor={(item: any, index: any) => index.toString()}
+                    showsHorizontalScrollIndicator={false}
+                    renderItem={({ item, index }) => (
+                      <MovieCard
+                        {...item}
+                        itemIndex={index}
+                      />
+                    )}
+                  />
+                </View>
+              </>
+
+            </ScrollView>
             :
             <Loader />
         }
-
-
-      </ScrollView>
+      </>
     );
   }
 }

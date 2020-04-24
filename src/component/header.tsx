@@ -21,7 +21,7 @@ export function Header(props: HeaderProps) {
                                 <Image style={{ height: vw(20), width: vw(20), }} source={Utils.Images.menuIcon} resizeMode='contain' />
                             </TouchableOpacity>
                             <TouchableOpacity>
-                                {/* <Image style={{ height: vw(40), width: vw(40), borderRadius: vw(20), backgroundColor: 'gray' }} /> */}
+                                <Image source={Utils.Images.profileImage} style={{ height: vw(40), width: vw(40), borderRadius: vw(20), backgroundColor: 'gray' }} />
                             </TouchableOpacity>
                         </View>
                     </>

@@ -13,7 +13,6 @@ export default memo(function ProgressiveImage(props: Props) {
             style={[styles.imageContainer, props.containerStyle]}
             source={{
                 uri: props.src,
-                headers: { Authorization: 'someAuthToken' },
                 priority: FastImage.priority.normal,
             }}
             resizeMode={FastImage.resizeMode.cover}
